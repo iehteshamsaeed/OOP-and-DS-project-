@@ -87,7 +87,7 @@ node *p=new node;
         p=p->next;
     }
      cout << "invalid" << endl;
-     
+
 
 
 
@@ -130,10 +130,11 @@ node *p=new node;
 
 void menu(list &l){
     comehere:
-cout << "Press 1 for add record of student" << endl;
-cout << "Press 2 for editing record of student" << endl;
-cout << "Press 3 for searching record of student " << endl;
-cout << "Press 4 for removing record of student" << endl;
+cout << "Press 1 for add record of student"             << endl;
+cout << "Press 2 for editing record of student"         << endl;
+cout << "Press 3 for searching record of student "      << endl;
+cout << "Press 4 for removing record of student"        <<  endl;
+cout << "Press 5 for displaying the  record of student" << endl;
 
 cout << "**********" << endl;
 cout <<endl;
@@ -189,6 +190,8 @@ l.insert(x,y,z,b,date,month,year);
 
 	 l.search();
     break;
+case 5:
+    l.display();
 
 
 
