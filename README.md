@@ -8,7 +8,7 @@ double b;
 class list{
  	private:
  		struct node{
-			string firstName,lastName;
+			string firstName,lastName;   
  			int id,dob[3];
     	    long gpa;
 			node *next;
@@ -58,7 +58,7 @@ void insert(string x,string y,int z,long b,int date,int month,int year)
 }
 void search()
 {
-	cout << "Please Enter Student ID " << endl;
+	cout << "Please Enter Student ID: " << endl;
 	cin >> fid;
 	node *p=new node;
     p=head;
@@ -66,28 +66,24 @@ void search()
 	{
         if(p->id==fid)
 		{
-            cout << " DISPLAYING THE SEARCHED DATA"<< endl;
-            cout << endl;
+            cout << "DISPLAYING THE SEARCHED DATA"<< endl;
 	        cout << "________________________________________________________________________________" << endl;
-            cout <<  "STUDENT'S FIRST NAME"<<"\t" << p->firstName  << endl;
-            cout << "STUDENT'S FATHER NAME"<<"\t" <<  p->lastName  <<endl;
-            cout <<  "STUDENT'S ID"<<"\t" << p->id<< endl;
-            cout << "STUDENTS's CGPA" <<endl;
-            cout <<p->gpa;
-            cout << endl;
-            cout << "STUDENT'S DOB" << endl;  
+            cout <<  "Student's Name:"<<"\t" << p->firstName << " " << p->lastName << endl;
+            cout <<  "Student's ID: "<< p->id<< endl;
+            cout << "Student's CGPA: " << p->gpa << endl;
+            cout << "Student's Date of Birth: ";  
            
             for(int l=0; l<3; l++)
 			{
             	if (l == 2)
-    		{
-    		cout << p->dob[l];	
-			}
-			else
-			{
-				cout << p->dob[l];
-				cout << "-";
-			}
+    			{
+    			cout << p->dob[l] << endl;	
+				}
+				else
+				{
+					cout << p->dob[l];
+					cout << "-";
+				}
             }
 	      
             return;
@@ -142,7 +138,7 @@ cin >> delid;
   int i=1;
     while(t!=NULL)
     {	cout << "________________________________________________________________________________" << endl;
-    	cout << "DATA OF STUDENT " << i <<endl;
+    	cout << "DATA OF STUDENT: " << i <<endl;
     	cout << "Student's Name: " << t->firstName << " " << t->lastName << endl;
     	cout << "Student's ID: " << t->id << endl;
     	cout << "Students's Date of Birth: ";
@@ -189,7 +185,7 @@ void menu(list &l)
 
 
 	cout <<endl;
-	cout << "                     CHOOSE FROM MENU \n ENTER YOUR OPTION : ";    cin >> choice;
+	cout << "                     CHOOSE FROM MENU \nENTER YOUR OPTION : ";    cin >> choice;
 	switch(choice)
 	{
 	case 1:
