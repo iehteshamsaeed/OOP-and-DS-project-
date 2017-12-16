@@ -3,14 +3,14 @@
 
 using namespace std;
 string x,y;
-long z,date,month,year,numberofstudents,choice,fid,delid;
-double b;
+double z,date,month,year,numberofstudents,b;
+int choice,fid,delid;
 class list{
  	private:
  		struct node{
 			string firstName,lastName;   
  			int id,dob[3];
-    	    long gpa;
+    	    double gpa;
 			node *next;
 		};
 	public:
@@ -27,7 +27,7 @@ class list{
 		}
 	}
 
-void insert(string x,string y,int z,long b,int date,int month,int year)
+void insert(string x,string y,int z,double b,int date,int month,int year)
 {
 	
 	node *ptr = new node;
